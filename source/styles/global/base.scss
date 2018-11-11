@@ -1,0 +1,34 @@
+body {
+  font-family: $font-family;
+  font-size: 16px;
+  line-height: 1;
+  background: $element-main-color;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+html {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+*,*:before, *:after {
+  box-sizing: inherit;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+.clearfix {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}

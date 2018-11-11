@@ -1,0 +1,16 @@
+@import "../../node_modules/normalize.scss/normalize";
+
+@import "global/base";
+@import "global/vars";
+@import "global/mixins";
+@import "global/title";
+@import "global/common";
+@import "global/hamburger";
+
+@import "sections/header";
+@import "sections/hero";
+@import "sections/customer-services";
+@import "sections/about-us";
+@import "sections/contact-us";
+@import "sections/modal";
+@import "sections/footer";

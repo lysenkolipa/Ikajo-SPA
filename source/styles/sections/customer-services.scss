@@ -1,0 +1,83 @@
+.customer-services {
+  display: flex;
+  padding: 85px 0 94px 0;
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-top: 50px;
+    &-item {
+      width: 16%;
+      text-align: center;
+    }
+  }
+  &__icon {
+    width: 65px;
+    height: 77px;
+  }
+  &__label {
+    color: $text-dark-color;
+    font-family: 'Montserrat semi-bold Italic', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 22px;
+    font-style: italic;
+  }
+}
+
+.title__header.customer-services__header::before {
+  left: 35%;
+}
+.title__header.customer-services__header::after {
+  right: 35%;
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+  .customer-services {
+    width: 100%;
+    &__label {
+      font-size: 20px;
+      line-height: 25px;
+    }
+  }
+  .title__header.customer-services__header::before {
+    left: 5%;
+  }
+  .title__header.customer-services__header::after {
+    right: 5%;
+  }
+
+}
+
+/* iPhone 6, 7, 8 ----------- */
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+  .customer-services {
+    padding-top: 30px;
+    &__label {
+      display: none;
+    }
+  }
+  .title__header.customer-services__header::before {
+    left: 28%;
+  }
+  .title__header.customer-services__header::after {
+    right: 28%;
+  }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+  .customer-services {
+    padding-top: 20px;
+    padding-bottom: 0;
+    &__label {
+      display: none;
+    }
+  }
+  .title__header.customer-services__header::before {
+    left: 12%;
+  }
+  .title__header.customer-services__header::after {
+    right: 12%;
+  }
+}

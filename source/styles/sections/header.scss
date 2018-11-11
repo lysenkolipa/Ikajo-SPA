@@ -1,0 +1,117 @@
+.header__fixed {
+  position: fixed;
+  z-index: 10;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+.headroom {
+  transition: transform .25s ease-in-out;
+  will-change: transform
+}
+
+.headroom--pinned {
+  transform: translateY(0);
+}
+
+.headroom--unpinned {
+  transform: translateY(-100%)
+}
+.header {
+  &__nav {
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.3s;
+    &-logo {
+      width: 100px;
+      height: 59px;
+    }
+    &-menu {
+      width:100%;
+      text-align: end;
+    }
+    &-link {
+      color: #8a8a8a;
+      font-family: $font-family;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 60px;
+      text-decoration: none;
+      padding-left: 29px;
+      position: relative;
+      &:hover, &:active {
+        color: $text-dark-color;
+        font-family: $font-family;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 28px;
+      }
+      &:after {
+        background-color: $element-dark-color;
+        display: block;
+        content: '';
+        height: 1px;
+        left:65%;
+        top:100%;
+        position: absolute;
+        transition: width .3s ease-in-out;
+        transform: translateX(-50%);
+      }
+      &:hover:after,
+      &:focus:after {
+        width: 60%;
+      }
+    }
+  }
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+  .header {
+    &__nav {
+      display: none;
+    }
+    &__hamburger-menu {
+      display: block;
+    }
+  }
+}
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+  .header {
+    &__nav {
+      display: none;
+    }
+    &__hamburger-menu {
+      display: block;
+    }
+  }
+}
+
+/* iPhone 6, 7, 8 ----------- */
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+  .header {
+    &__nav {
+      display: none;
+    }
+    &__hamburger-menu {
+      display: block;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+  .header {
+    &__nav {
+      display: none;
+    }
+    &__hamburger-menu {
+      display: block;
+    }
+  }
+}
+
+

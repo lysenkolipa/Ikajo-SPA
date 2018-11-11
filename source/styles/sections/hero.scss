@@ -1,0 +1,99 @@
+.hero {
+  background-image:url(../../images/banner.jpg);
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-size: cover;
+  box-sizing: border-box;
+  max-width: 1920px;
+  height: 638px;
+  margin-top: 94px;
+  position: relative;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  &__wrapper {
+    position: absolute;
+    margin: 0;
+    margin-right: -50%;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+  }
+
+
+  &__header {
+    color: $text-main-color;
+    font-family: $font-family;
+    font-size: 55px;
+    font-weight: 400;
+    line-height: 28px;
+  }
+  &__text {
+    color: $text-main-color;
+    font-family: $font-family;
+    font-size: 18px;
+    font-style: italic;
+    line-height: 30px;
+    width: 638px;
+  }
+
+  &__footer  {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+  }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+  .hero {
+    width: 100%;
+    margin-top: -30px;
+    &__wrapper {
+      left: 39%;
+    }
+  }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+  .hero {
+    width: 100%;
+    margin-top: -30px;
+    &__wrapper {
+      left: 50%;
+    }
+    &__header {
+      font-size: 60px;
+    }
+    &__text {
+      font-size: 25px;
+    }
+  }
+}
+
+/* iPhone 6, 7, 8 ----------- */
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+  .hero {
+    height: 405px;
+    margin-top: -30px;
+    &__wrapper { left: 55%; }
+    &__header { font-size: 33px; }
+    &__text { font-size: 16px; }
+  }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+  .hero {
+    margin-top: -30px;
+    height: 697px;
+    &__wrapper {
+      left: 50%;
+      padding-left: 0;
+      width: 300px;
+    }
+    &__header { font-size: 28px; }
+    &__text {
+      font-size: 18px;
+      width: 300px;
+    }
+  }
+}
+

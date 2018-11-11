@@ -1,0 +1,73 @@
+.about-us {
+  background-image: url(../../images/counter-bg.jpg);
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-size: cover;
+  box-sizing: border-box;
+  height: 450px;
+  padding: 64px 0;
+
+  & .title__header{
+    color: $text-main-color;
+  }
+
+  &__text {
+    text-align: center;
+    color: $text-main-color;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    &:last-child {
+      text-align: left;
+      padding: 0 15px;
+    }
+    &-wrapper {
+      width: 1064px;
+    }
+  }
+}
+
+.title__header.white-header::before,
+.title__header.white-header::after
+{
+  background-color: $element-main-color;
+}
+
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+  .about-us {
+    width: 100%;
+    &__text-wrapper {
+      width: 1000px;
+      padding-left: 20px;
+    }
+  }
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+  .about-us {
+    width: 100%;
+    height: auto;
+    &__text-wrapper {
+      width: 700px;
+      padding-left: 60px;
+    }
+  }
+}
+
+/* iPhone 6, 7, 8 ----------- */
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+  .about-us {
+    height: auto;
+    &__text-wrapper {
+      width: 600px;
+      padding-left: 40px;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+  .about-us {
+    display: none;
+  }
+}

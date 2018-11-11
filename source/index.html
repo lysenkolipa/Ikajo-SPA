@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,width=device-width">
+    <meta property="og:site_name" content="Title">
+    <meta property="og:title" content="Title">
+    <meta name="description" content="Single page application about webservices with google map integration and form validation.">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,600i" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="shortcut icon" href="https://static.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" type="image/x-icon">
+    <title>WebServices</title>
+  </head>
+  <body>
+    <header class="header headroom header__fixed" role="banner">
+        <div class="container">
+            <!----Hamburger menu---->
+            <nav role="navigation" class="header__hamburger-menu">
+                <div id="menuToggle">
+                    <input type="checkbox"/>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <ul id="menu">
+                        <a class="header__hamburger-menu__link" href="#"><li>Home</li></a>
+                        <a class="header__hamburger-menu__link" href="#"><li>Services</li></a>
+                        <a class="header__hamburger-menu__link" href="#"><li>About Us</li></a>
+                        <a class="header__hamburger-menu__link" href="#"><li>Contact Us</li></a>
+                    </ul>
+                </div>
+            </nav>
+            <!------>
+            <nav class="header__nav" id="nav" role="navigation">
+                <div class="header__nav-logo">
+                    <a href="#" class="header__logo-link">
+                        <img class="logo-img" src="images/webservices_logo.svg" alt="logo">
+                    </a>
+
+                </div>
+                <div class="header__nav-menu">
+                    <a class="header__nav-link" href="#">Home</a>
+                    <a class="header__nav-link" href="#"> Services</a>
+                    <a class="header__nav-link" href="#">About Us</a>
+                    <a class="header__nav-link" href="#">Contact US</a>
+                </div>
+            </nav>
+
+
+        </div>
+    </header>
+    <section class="hero">
+        <div class="container">
+            <div class="hero__wrapper">
+                <h1 class="hero__header">Solutions for your business</h1>
+                <p class="hero__text">Accept credit cards on your web store today! Customized e-commerce
+                    solutions. All the tools you’ll need to grow your business.</p>
+            </div>
+            <div class="hero__footer">
+                <img src="images/mouse.png" alt="" class="hero__footer-img">
+            </div>
+        </div>
+    </section>
+    <section class="customer-services">
+      <div class="container">
+        <h2 class="title__header customer-services__header">Customer services</h2>
+        <div class="title__text">WebServices ltd. is everything even the most demanding customer looks for in a payment service provider. Thanks to our expertise and years of experience in the field, you will start accepting online payments within several business days.</div>
+        <div class="customer-services__wrapper">
+            <div class="customer-services__wrapper-item">
+                <img class="customer-services__icon" src="images/fast_payment.svg" alt="">
+                <p class="customer-services__label">Fast Payment</p>
+            </div>
+            <div class="customer-services__wrapper-item">
+                <img class="customer-services__icon" src="images/data_authentication.svg" alt="">
+                <p class="customer-services__label">Data authentication and processing</p>
+            </div>
+            <div class="customer-services__wrapper-item">
+                <img class="customer-services__icon"  src="images/secure_infrastructure.svg" alt="">
+                <p class="customer-services__label">Secure IT Infrastructure</p>
+            </div>
+            <div class="customer-services__wrapper-item">
+                <img class="customer-services__icon" src="images/technical_support.svg" alt="">
+                <p class="customer-services__label">Technical Support</p>
+            </div>
+        </div>
+      </div>
+    </section>
+    <section class="about-us">
+      <div class="container">
+          <h2 class="title__header white-header">About us</h2>
+          <div class="about-us__text-wrapper">
+              <p class="about-us__text">WebServices ltd. was among the first companies offering e-commerce and professional payment processing services, modern fraud and chargeback prevention instruments and 24/7 customer support.</p>
+              <p class="about-us__text">It did not take long before WebServices ltd. took up a leading position on the market thanks to its constant development and a desire to overcome a growing competition with the aid of advanced software and customizable services.</p>
+              <p class="about-us__text">Today, every business collaborating with WebServices ltd. can see a significant growth in their revenue. The company works with businesses from all over the world aiming to meet and even exceed expectations of the customers, both existing and new ones.</p>
+          </div>
+      </div>
+    </section>
+    <section class="contact-us container">
+        <h2 class="title__header">Contact us</h2>
+        <p class="title__text">Unit F, 11/F, CNT Tower, <br> 338 Hennessy Road, Wan Chai, Hong Kong</p>
+        <div class="contact-us__wrapper">
+            <div class="col-1-of-2 contact-us__map">
+                <div id="map" class="map"></div>
+            </div>
+            <div class="col-1-of-2">
+                <form class="form" id="form" method="post" action="#">
+                    <input class="fields name" name="name" type="text" placeholder="Name">
+                    <span class="name"></span>
+                    <input class="fields email" name="email" type="email" placeholder="Email">
+                    <span class="email"></span>
+                    <textarea class="fields note" name="notes"> </textarea>
+                    <span class="notes"></span>
+                    <div class="form__btn-wrapper">
+                        <button class="button" id="submit-btn" type="submit">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="modal">
+        <div class="modal-container">
+            <p>Thanks!</p>
+            <p>Your message sent successfully!</p>
+            <a href="index.html">
+                <button class="button">Close</button>
+            </a>
+        </div>
+    </section>
+    <footer class="footer">
+        <nav class="footer__nav">
+            <a class="footer__nav-link" href="#" >Home</a>
+            <a class="footer__nav-link" href="#" >Services</a>
+            <a class="footer__nav-link" href="#" >About Us</a>
+            <a class="footer__nav-link" href="#" >Contact Us</a>
+            <a class="footer__nav-link" href="#" >Privacy Policy</a>
+            <a class="footer__nav-link" href="#" >Terms & Conditions</a>
+        </nav>
+        <div class="footer__copyright">
+            <small>All rights reserved © 2018</small>
+        </div>
+
+      </div>
+    </footer>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATXdQVGPIh6BbMkIJwFTqZfhyWufc-v-g&callback=initMap"
+            async defer></script>
+    <script type="text/javascript" src="js/google-map.js"></script>
+    <script type="text/javascript" src="js/validation.js"></script>
+    <script type="text/javascript" src="js/headroom.js"></script>
+    <script type="text/javascript" src="js/header-animation.js"></script>
+  </body>
+</html>
